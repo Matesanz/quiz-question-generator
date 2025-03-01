@@ -52,5 +52,5 @@ patch_tags = [
     "👷"]  # ci/cd
 
 [tool.semantic_release.branches.main]
-match = "*"
+match = "main"
 prerelease = false
