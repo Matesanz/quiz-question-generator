@@ -1,9 +1,16 @@
+name: Python Semantic Release
+
 on:
   pull_request:
     branches:
-    - main
+      - main
 
 jobs:
-  my_job:
-    name: Python Semantic Release
-    uses: python-semantic-release/python-semantic-release@v9.21.0
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Python Semantic Release
+        uses: python-semantic-release/python-semantic-release@v9.21.0
