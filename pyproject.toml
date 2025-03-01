@@ -1,0 +1,32 @@
+[project]
+name = "quiz-question-generator"
+version = "0.1.0"
+description = "Quiz Question Generator API and UI"
+authors = [
+    {name = "Andrés Matesanz",email = "matesanz.cuadrado@gmail.com"}
+]
+readme = "README.md"
+packages = [{include = "app"}]
+requires-python = ">=3.12,<4"
+dependencies = [
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.9.9"
+pre-commit = "^4.1.0"
+pylint = "^3.3.4"
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.3.4"
+assertpy = "^1.1"
+
+[tool.poetry.group.release.dependencies]
+python-semantic-release = "^9.21.0"
+
+
+
