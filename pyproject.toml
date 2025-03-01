@@ -1,15 +1,13 @@
-[project]
+[tool.poetry]
 name = "quiz-question-generator"
 version = "0.1.0"
 description = "Quiz Question Generator API and UI"
-authors = [
-    {name = "Andrés Matesanz",email = "matesanz.cuadrado@gmail.com"}
-]
+authors = ["Andrés Matesanz <matesanz.cuadrado@sngular.com>"]
 readme = "README.md"
 packages = [{include = "app"}]
-requires-python = ">=3.12,<4"
-dependencies = [
-]
+
+[tool.poetry.dependencies]
+python = ">=3.12,<4"
 
 
 [build-system]
