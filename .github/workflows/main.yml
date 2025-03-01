@@ -1,5 +1,9 @@
 name: Python Semantic Release
 
+permissions:
+  id-token: write
+  contents: write
+
 on:
   push:
     branches:
