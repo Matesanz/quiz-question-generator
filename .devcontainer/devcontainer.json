@@ -1,0 +1,42 @@
+{
+	"name": "🎓 Quiz Question Generator",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"args": { 
+			"PYTHON_VERSION": "3.12.8"
+		}
+	},
+
+	// 👇 Features to add to the Dev Container. More info: https://containers.dev/implementors/features.
+	// "features": {},
+
+	// 👇 Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// 👇 Use 'postCreateCommand' to run commands after the container is created.
+	"postCreateCommand": "bash ./.devcontainer/post-install.sh",
+
+	// 👇 Configure tool-specific properties.
+	"customizations": {
+        "vscode": {
+			"settings": {
+				"python.defaultInterpreterPath": "python"
+			},
+            "extensions":[
+				"ms-python.python",
+				"njpwerner.autodocstring",
+				"ms-azuretools.vscode-docker",
+				"mhutchie.git-graph",
+				"PKief.material-icon-theme",
+				"yzhang.markdown-all-in-one",
+				"christian-kohler.path-intellisense",
+				"Perkovec.emoji",
+				"seatonjiang.gitmoji-vscode",
+				"tamasfe.even-better-toml"
+			]
+            }
+        }
+
+	// 👇 Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
+}
