@@ -2,12 +2,12 @@ name: Python Semantic Release
 
 permissions:
   id-token: write
-  contents: write
+    contents: write
 
-on:
-  push:
-    branches:
-      - '**'
+  on:
+    pull_request:
+      branches:
+        - main
 
 jobs:
   release:
