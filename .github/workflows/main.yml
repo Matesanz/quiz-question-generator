@@ -1,0 +1,2 @@
+- name: Python Semantic Release
+  uses: python-semantic-release/python-semantic-release@v9.21.0
