@@ -1,0 +1,25 @@
+default_stages: [pre-commit]
+repos:
+  - repo: local
+    hooks:
+
+      - id: ruff
+        name: ruff
+        entry: ruff check --fix
+        types: [python]
+        language: system
+        exclude: ^tests/
+        verbose: true
+
+      - id: pylint
+        name: Pylint
+        entry: pylint
+        args:
+          [
+            "--rcfile=pyproject.toml",
+            "-j 0"
+          ]
+        types: [python]
+        language: system
+        exclude: ^tests/
+
