@@ -1,2 +1,9 @@
-- name: Python Semantic Release
-  uses: python-semantic-release/python-semantic-release@v9.21.0
+on:
+  pull_request:
+    branches:
+    - main
+
+jobs:
+  my_job:
+    name: Python Semantic Release
+    uses: python-semantic-release/python-semantic-release@v9.21.0
