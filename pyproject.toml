@@ -8,11 +8,10 @@ packages = [{include = "app"}]
 
 [tool.poetry.dependencies]
 python = ">=3.12,<4"
-
-
-[build-system]
-requires = ["poetry-core>=2.0.0,<3.0.0"]
-build-backend = "poetry.core.masonry.api"
+aisuite = {extras = ["openai"], version = "^0.1.10"}
+fastapi = {version = "~0.115", extras = ["standard"]}
+pydantic = "^2.10.6"
+pydantic-settings = "^2.8.1"
 
 [tool.poetry.group.dev.dependencies]
 ruff = "^0.9.9"
@@ -22,6 +21,7 @@ pylint = "^3.3.4"
 [tool.poetry.group.test.dependencies]
 pytest = "^8.3.4"
 assertpy = "^1.1"
+pytest-mock = "^3.14.0"
 
 [tool.poetry.group.release.dependencies]
 python-semantic-release = "^9.21.0"
