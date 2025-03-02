@@ -10,6 +10,30 @@ on:
       - 'main'
 
 jobs:
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup | Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup | Install Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Setup | Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install poetry==2.1.1
+          poetry install --only dev,test
+
+      - name: Action | Run pre-commit
+        run: pre-commit run --all-files
+
+      - name: Action | Run Tests
+        run: pytest tests/
+
   release:
     runs-on: ubuntu-latest
     steps:
