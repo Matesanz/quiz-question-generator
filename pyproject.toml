@@ -29,6 +29,11 @@ pytest-env = "^1.1.5"
 [tool.poetry.group.release.dependencies]
 python-semantic-release = "^9.21.0"
 
+
+[tool.poetry.group.ui.dependencies]
+streamlit = "~1.42.2"
+requests = "^2.32.3"
+
 [tool.semantic_release]
 version_toml = ["pyproject.toml:tool.poetry.version",]
 version_variables = ["app/__init__.py:__version__",]
