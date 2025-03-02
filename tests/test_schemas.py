@@ -1,7 +1,7 @@
 import pytest
 from assertpy import assert_that
 from pydantic import ValidationError
-from app.schemas import LLMMessage, QuizOption, QuizQuestion, Quiz
+from app.schemas import LLMMessage, QuizOption, QuizQuestion, Quiz, QuizRequest
 
 def test_llm_message():
     message = LLMMessage(role="system", content="Test content")
@@ -29,3 +29,8 @@ def test_quiz():
     questions = [QuizQuestion(question="Test question", options=options)]
     quiz = Quiz(questions=questions)
     assert_that(quiz.questions).is_length(1)
+
+def test_quiz_request():
+    request = QuizRequest(learning_objective="Test Objective", n_questions=5)
+    assert_that(request.learning_objective).is_equal_to("Test Objective")
+    assert_that(request.n_questions).is_equal_to(5)

@@ -35,3 +35,8 @@ class QuizQuestion(BaseModel):
 class Quiz(BaseModel):
     """Model representing a quiz."""
     questions: list[QuizQuestion]
+
+class QuizRequest(BaseModel):
+    """Model representing a request to generate a quiz."""
+    learning_objective: str = Field(..., description="The learning objective for the quiz.", min_length=1)
+    n_questions: int = Field(2, description="The number of questions to generate.", ge=1)
