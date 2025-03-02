@@ -18,6 +18,16 @@ def check_connection():
     response = requests.get(API_URL, timeout=1)
     response.raise_for_status()
 
+def set_config():
+    st.set_page_config(
+        page_title="Quizz App Generator",
+        page_icon="❓",
+    )
+
+def initialize():
+    check_connection()
+    set_config()
+
 def retrieve_quiz(learning_objective: str, n_questions: int) -> dict:
     body = {"learning_objective": learning_objective, "n_questions": n_questions}
     response = requests.post(QUIZ_CREATION_URL, json=body)
@@ -91,5 +101,5 @@ def run():
     else:
         display_info()
 
-check_connection()
+initialize()
 run()
