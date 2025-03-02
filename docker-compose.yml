@@ -1,0 +1,21 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+
+  front:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        APP_TYPE: ui
+    environment:
+      - API_URL=http://app:8000
+    ports:
+      - "8501:8501"
+    command: ["-m", "streamlit", "run", "app/ui.py"]
