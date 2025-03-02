@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "quiz-question-generator"
-version = "0.1.1"
+version = "0.2.0"
 description = "Quiz Question Generator API and UI"
 authors = ["Andrés Matesanz <matesanz.cuadrado@sngular.com>"]
 readme = "README.md"

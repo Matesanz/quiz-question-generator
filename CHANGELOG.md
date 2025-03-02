@@ -1,6 +1,22 @@
 # CHANGELOG
 
 
+## v0.2.0 (2025-03-02)
+
+### Other
+
+- Merge branch 'main' into Matesanz/issue4
+  ([`0beb515`](https://github.com/Matesanz/quiz-question-generator/commit/0beb51546510b63ee56abc326e0967a14ad85433))
+
+- Merge pull request #12 from Matesanz:Matesanz/issue4
+  ([`ec869fc`](https://github.com/Matesanz/quiz-question-generator/commit/ec869fcc9182d11ba833edaaab18ef53ebfc7343))
+
+Matesanz/issue4
+
+- ✏️ fix current version in pyproject.toml
+  ([`e9899af`](https://github.com/Matesanz/quiz-question-generator/commit/e9899aff60623edb4d57c6126c20dc0d4caf6ce6))
+
+
 ## v0.1.1 (2025-03-02)
 
 ### Other
@@ -10,10 +26,62 @@
 
 👷 add test and linting steps to CI/CD
 
+- ➕ add aisuite, fastapi, pydantic, and add pytest-mock dependencies
+  ([`bc6334c`](https://github.com/Matesanz/quiz-question-generator/commit/bc6334c448844e823a2340595c10f5393ce57dbe))
+
+- ➕ add loguru to dependencies
+  ([`9e54b93`](https://github.com/Matesanz/quiz-question-generator/commit/9e54b938246b9d96afd708090cca842a41ce1cda))
+
+- 💚 configure Poetry to install dependencies without creating a virtual environment in CI
+  ([`7cdb2c7`](https://github.com/Matesanz/quiz-question-generator/commit/7cdb2c774f404592ddc986c3686bcc164238e495))
+
+- 💚 fix version update in pyproject.toml
+  ([`9ad9f0e`](https://github.com/Matesanz/quiz-question-generator/commit/9ad9f0ef39b153115024e4eb6a3ef99858b1f6a9))
+
+- 📌 pin aisuite dependency to 0.1.10 version
+  ([`436c926`](https://github.com/Matesanz/quiz-question-generator/commit/436c9260e8638dc29d1c63b1815d4c2e25e6f334))
+
+- 🔊 add logs
+  ([`f645a29`](https://github.com/Matesanz/quiz-question-generator/commit/f645a296383e0e3571a0b96af43a4d5304dc1d1d))
+
+- 🔧 add configuration settings for the Quiz Question Generator API
+  ([`2c073b8`](https://github.com/Matesanz/quiz-question-generator/commit/2c073b8a6f46e16877b11eb06453a6d6904448ad))
+
+- 🔧 add ruff + pylint config to pyproject.toml
+  ([`ef4343f`](https://github.com/Matesanz/quiz-question-generator/commit/ef4343f705cace800b02f936dce7d11ef4747bf4))
+
+- 🔧 update Dockerfile to use slim-bullseye image and streamline application run command
+  ([`5eae40f`](https://github.com/Matesanz/quiz-question-generator/commit/5eae40fd843e46511e7356e2e739a1ce86e524c2))
+
+### ✨
+
+- ✨ add FastAPI application and endpoints for quiz generation
+  ([`d299d51`](https://github.com/Matesanz/quiz-question-generator/commit/d299d51eeb3d62924d0e92ee3c7329713de30ee9))
+
+- ✨ add llm module functionality and corresponding tests
+  ([`2679554`](https://github.com/Matesanz/quiz-question-generator/commit/267955404ff437630bd595e81995ad12a363c128))
+
+- ✨ add main module to run the API server with Uvicorn
+  ([`46d6da4`](https://github.com/Matesanz/quiz-question-generator/commit/46d6da4e2e7f93e4ce93a8aba2e4cd7352d23862))
+
+- ✨ add quiz generation module and corresponding tests
+  ([`ea72c40`](https://github.com/Matesanz/quiz-question-generator/commit/ea72c401e24c221eb23bc5947dd2e7db9861a476))
+
+- ✨ add QuizRequest model for quiz generation requests and corresponding tests
+  ([`3811815`](https://github.com/Matesanz/quiz-question-generator/commit/3811815766bffa67d2ed580ad9a4dd5ed5734621))
+
+- ✨ add schemas for quiz generation
+  ([`bc9b3b3`](https://github.com/Matesanz/quiz-question-generator/commit/bc9b3b3c6534ec8635ad2f285693793a8e9d41d7))
+
 ### 👷
 
 - 👷 add test and linting steps to CI/CD
   ([`4f35744`](https://github.com/Matesanz/quiz-question-generator/commit/4f35744967417f9381d25f90a7b508641a8dc538))
+
+### 📝
+
+- 📝 update README with Docker run instructions and API usage examples
+  ([`c974a75`](https://github.com/Matesanz/quiz-question-generator/commit/c974a75b928db2bba1d2ec86105f043f19b30ac7))
 
 
 ## v0.1.0 (2025-03-01)
