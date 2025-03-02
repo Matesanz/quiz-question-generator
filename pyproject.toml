@@ -8,10 +8,11 @@ packages = [{include = "app"}]
 
 [tool.poetry.dependencies]
 python = ">=3.12,<4"
-aisuite = {extras = ["openai"], version = "^0.1.10"}
+aisuite = {version = "~0.1.10", extras = ["openai"]}
 fastapi = {version = "~0.115", extras = ["standard"]}
 pydantic = "^2.10.6"
 pydantic-settings = "^2.8.1"
+docstring-parser = "~0.16"
 
 [tool.poetry.group.dev.dependencies]
 ruff = "^0.9.9"
