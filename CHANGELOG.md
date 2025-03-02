@@ -1,6 +1,54 @@
 # CHANGELOG
 
 
+## v0.3.0 (2025-03-02)
+
+### Other
+
+- Merge pull request #14 from Matesanz:Matesanz/issue13
+  ([`bcf5e49`](https://github.com/Matesanz/quiz-question-generator/commit/bcf5e49152253506be5a1f18f9c6a92c69a0e4eb))
+
+💚 update Python version to 3.12.8 and adjust poetry installation steps in CI
+
+- Merge pull request #15 from Matesanz:Matesanz/issue13
+  ([`2d21e65`](https://github.com/Matesanz/quiz-question-generator/commit/2d21e650e1693b4d2ae337e27f037f0fc6d385f4))
+
+💚 add pytest-env package for managing environment variables in tests
+
+- Merge pull request #17 from Matesanz:Matesanz/issue16
+  ([`dbccddf`](https://github.com/Matesanz/quiz-question-generator/commit/dbccddf62ef98cb0bd78189b470224baf986c569))
+
+✨ Add Streamlit UI for Quiz Question Generator
+
+- ➕ add Streamlit and Requests dependencies for UI group in pyproject.toml
+  ([`fd6bd1b`](https://github.com/Matesanz/quiz-question-generator/commit/fd6bd1b5010b2d7b0de48735dfd5a2f5cc20ab1b))
+
+- 💚 add pytest-env package for managing environment variables in tests
+  ([`7283d97`](https://github.com/Matesanz/quiz-question-generator/commit/7283d9743d130623c1f337599530b205efb32e5f))
+
+- 💚 update Python version to 3.12.8 and adjust poetry installation steps
+  ([`80a8456`](https://github.com/Matesanz/quiz-question-generator/commit/80a8456e829e60105d63e8bcf85eff25871da217))
+
+- 🔧 add docker-compose.yml for app and front services
+  ([`93457b9`](https://github.com/Matesanz/quiz-question-generator/commit/93457b973ce8eb49c22a21692f81bb0437909a78))
+
+- 🔧 add ui page title an icon
+  ([`f6bd382`](https://github.com/Matesanz/quiz-question-generator/commit/f6bd382b834abf10bece6af9599633ac7a03eee1))
+
+- 🔧 update Dockerfile to allow dynamic app type installation (ui/back) and adjust entrypoint
+  ([`ac10725`](https://github.com/Matesanz/quiz-question-generator/commit/ac10725a24376d11407f3cf7392178dee11f34f3))
+
+### ✨
+
+- ✨ add Streamlit UI
+  ([`4f79d48`](https://github.com/Matesanz/quiz-question-generator/commit/4f79d489355a3be91f053abbb65bf1dc40828edc))
+
+### 📝
+
+- 📝 update README for docker compose setup
+  ([`4278329`](https://github.com/Matesanz/quiz-question-generator/commit/42783299654ee6412a83960d88e8d850e42fb8d6))
+
+
 ## v0.2.0 (2025-03-02)
 
 ### Other
