@@ -1,6 +1,21 @@
 # CHANGELOG
 
 
+## v0.1.1 (2025-03-02)
+
+### Other
+
+- Merge pull request #11 from Matesanz:Matesanz/issue2
+  ([`be5fe60`](https://github.com/Matesanz/quiz-question-generator/commit/be5fe606ddd82f41dd76d66a27aa0c5fe3254bab))
+
+👷 add test and linting steps to CI/CD
+
+### 👷
+
+- 👷 add test and linting steps to CI/CD
+  ([`4f35744`](https://github.com/Matesanz/quiz-question-generator/commit/4f35744967417f9381d25f90a7b508641a8dc538))
+
+
 ## v0.1.0 (2025-03-01)
 
 ### Other
