@@ -2,20 +2,33 @@
 
 A simple App that creates a set of questions for a specific learning objective. It uses LLMs in order to provide the set of questions.
 
+![image](https://private-user-images.githubusercontent.com/44867923/418365230-452dbcee-a4a7-4d08-b388-a9f3ee2cb223.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDA5MzYwMDMsIm5iZiI6MTc0MDkzNTcwMywicGF0aCI6Ii80NDg2NzkyMy80MTgzNjUyMzAtNDUyZGJjZWUtYTRhNy00ZDA4LWIzODgtYTlmM2VlMmNiMjIzLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTAzMDIlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwMzAyVDE3MTUwM1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWFjYTYxM2MyNTE4MWRlMmU0MDZiMDM0ZDYzYmZiNGQ1MDA5YWQ5ZWI3NDVmMTUyOGFiMDQxNTkxYzkzNjk4NGImWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.1KVN_Q92dJjECcT0SUKHWxbSjN5IJMOLOD_hBBD5S5M)
+
 ## 🚀 Quick Start
 
-```bash
-# Build the Docker image
-docker build -t quiz-question-generator .
+1. First, **clone** the repository:
 
-# Run the Docker container
-docker run -it --rm \
-   -p 8000:8000 \
-   -e OPENAI_API_KEY="your_openai_api_key" \
-   quiz-question-generator
+```bash
+git clone https://github.com/Matesanz/quiz-question-generator.git
+cd quiz-question-generator
 ```
 
-**🎉 You can now go to http://localhost:8000/docs** to try the API
+2. Then **add** the `OPENAI_API_KEY` in a **`.env` file** in the root folder.
+
+```plaintext
+# .env file
+OPENAI_API_KEY="sk-proj-123"
+```
+
+3. Then use **docker compose** to launch the front and back services
+
+```bash
+docker compose up
+```
+
+4. **🎉 Enjoy!**
+- **👉 You can now go to http://localhost:8000/docs** to try the API
+- **👉 You can now go to http://localhost:8501/** to try the streamlit quiz generator
 
 > [!NOTE]
 > You can find more configurable parameters in the [Parameters section](#parameters)
