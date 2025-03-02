@@ -24,6 +24,7 @@ pylint = "^3.3.4"
 pytest = "^8.3.4"
 assertpy = "^1.1"
 pytest-mock = "^3.14.0"
+pytest-env = "^1.1.5"
 
 [tool.poetry.group.release.dependencies]
 python-semantic-release = "^9.21.0"
@@ -69,7 +70,9 @@ extend_skip_glob = ["docs/*", "notebooks/*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
-
+env = [
+    "OPENAI_API_KEY=123456789",
+]
 
 [tool.pylint]
     [tool.pylint.main]
