@@ -4,14 +4,76 @@ A simple App that creates a set of questions for a specific learning objective. 
 
 ## 🚀 Quick Start
 
-To start this project simply run:
-
 ```bash
 # Build the Docker image
 docker build -t quiz-question-generator .
 
 # Run the Docker container
-docker run -it --rm -p 8000:8000 quiz-question-generator
+docker run -it --rm \
+   -p 8000:8000 \
+   -e OPENAI_API_KEY="your_openai_api_key" \
+   quiz-question-generator
+```
+
+**🎉 You can now go to http://localhost:8000/docs** to try the API
+
+> [!NOTE]
+> You can find more configurable parameters in the [Parameters section](#parameters)
+
+You can also use code to check the API
+
+```python
+import requests
+
+url = "http://localhost:8000/generate-quiz"
+payload = {
+   "learning_objective": "Understand the basics of Python programming",
+   "n_questions": 5
+}
+headers = {
+   "Content-Type": "application/json"
+}
+
+response = requests.post(url, json=payload, headers=headers)
+quiz = response.json()
+```
+
+
+## ⚙️ Configuration
+
+The application can be configured using a `.env` file or environment variables. Parameters set in the .env file will have preference over the ones set using env variables.
+
+- [Set the configuration using a .env file](#using-env-file)
+- [Set the configuration using env variables](#using-env-variables)
+
+### Parameters
+
+Alternatively, you can set the configuration options using environment variables:
+
+| Variable         | Description                              | Default                        |
+|------------------|------------------------------------------|--------------------------------|
+| `OPENAI_API_KEY` | Your OpenAI API key                      |                                |
+| `API_HOST`       | The host for the API                     | `0.0.0.0`                      |
+| `API_PORT`       | The port for the API                     | `8000`                         |
+| `API_DEBUG`      | Enable or disable debug mode             | `True`                         |
+| `LLM_MODEL`      | The LLM model to use. This API uses [AISuite](https://github.com/andrewyng/aisuite) where models from multiple providers can be used, so this variable uses a `<provider>:<model>` format. Refer to that project for more info. | `openai:gpt-4o-mini-2024-07-18` |
+
+### Using .env File
+
+Create a `.env` file in the root directory with the following content:
+
+```plaintext
+# .env file
+OPENAI_API_KEY="your_openai_api_key"
+```
+
+### Using env variables
+
+You could also pass environment variables directly when running the Docker container or in your console session.
+
+```bash
+# in console
+export OPENAI_API_KEY="your_openai_api_key"
 ```
 
 ## 🏗️ Development
