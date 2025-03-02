@@ -14,7 +14,11 @@ COPY pyproject.toml poetry.lock README.md ./
 RUN poetry install --no-root --only main
 
 # Create the production image
-FROM python:${PYTHON_VERSION}-alpine AS production
+FROM python:${PYTHON_VERSION}-slim-bullseye AS production
 COPY --from=build /usr/local/lib/python${PYTHON_VERSION%.*}/site-packages /usr/local/lib/python${PYTHON_VERSION%.*}/site-packages
+COPY pyproject.toml README.md ./
 COPY app/ /app
-WORKDIR /app
+RUN pip install . --no-deps
+
+# Run the application
+CMD ["python", "app/main.py"]
