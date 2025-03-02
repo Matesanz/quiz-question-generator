@@ -10,8 +10,9 @@ ENV POETRY_NO_INTERACTION=1 \
 RUN pip install poetry==$POETRY_VERSION
 
 # install dependencies
+ARG APP_TYPE=main
 COPY pyproject.toml poetry.lock README.md ./
-RUN poetry install --no-root --only main
+RUN poetry install --no-root --only $APP_TYPE
 
 # Create the production image
 FROM python:${PYTHON_VERSION}-slim-bullseye AS production
@@ -21,4 +22,5 @@ COPY app/ /app
 RUN pip install . --no-deps
 
 # Run the application
-CMD ["python", "app/main.py"]
+ENTRYPOINT [ "python" ]
+CMD ["app/main.py"]
