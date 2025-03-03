@@ -7,7 +7,7 @@ A simple App that creates a set of questions for a specific learning objective. 
 ## 🔎 Table of contents
 
 - [🎓 Quiz Question Generator](#-quiz-question-generator)
-  - [� Table of contents](#-table-of-contents)
+  - [🔎 Table of contents](#-table-of-contents)
   - [🚀 Quick Start](#-quick-start)
   - [📝 How to use the API](#-how-to-use-the-api)
   - [☁️ How to deploy to the cloud](#️-how-to-deploy-to-the-cloud)
@@ -21,6 +21,8 @@ A simple App that creates a set of questions for a specific learning objective. 
   - [🏗️ Development](#️-development)
     - [🐋 Devcontainer Environment](#-devcontainer-environment)
     - [🧑‍⚖️ Pre-Commit](#️-pre-commit)
+  - [🔙 Project Retrospective](#-project-retrospective)
+  - [🌟 Next Steps](#-next-steps)
 
 ## 🚀 Quick Start
 
@@ -196,3 +198,31 @@ pre-commit install
 ```
 
 This will install a bunch of hooks that will check staged files (only the `*.py` staged files) to check that they stick to black, autopep8, isort and some other standards.
+
+## 🔙 Project Retrospective
+
+Before diving into the specific tasks, it is important to outline the structured approach we took to ensure a well-organized and efficient development process. Each step was designed to build upon the previous one, ensuring seamless integration and optimal performance.
+
+1. **Repository Setup**: We initialized a new repository to manage the project efficiently.
+2. **Basic File Structure**: Essential files such as `README.md`, `pyproject.toml`, and `.gitignore` were included to ensure a well-documented and organized codebase.
+3. **CI/CD Principles**: We implemented the foundational elements of CI/CD using GitHub Actions to manage API releases.
+4. **Dockerization**: The solution was containerized to enhance portability and ease of deployment.
+5. **Business Logic Development**: We validated the connection with the LLM and ensured proper quiz generation functionality.
+6. **API Development**: The business logic was encapsulated within an API to allow structured access and interaction.
+7. **CI/CD Pipelines for Testing and Linting**: Additional pipelines were integrated to enforce code quality through automated testing and linting.
+8. **Basic UI with Streamlit**: A simple interface was built using Streamlit to enhance usability.
+9. **Docker Image Deployment**: The process for building and pushing a Docker image to Docker Hub was implemented to facilitate cloud deployment.
+10. **Continuous Documentation and Testing**: Throughout all phases of the project, thorough documentation and test coverage were maintained to ensure clarity and reliability.
+
+The easiest/most difficult parts of the project:
+
+- **Easiest (or Most Enjoyable) Part**: The development of the API was relatively straightforward and enjoyable once the business logic was fully implemented. Having a well-defined structure allowed for a smooth encapsulation of the core functionalities.
+- **Hardest (or Most Tedious) Part**: The configuration of CI/CD pipelines was the most challenging aspect. The feedback loop for error correction in CI/CD is inherently slow, making debugging and refinement a time-consuming process.
+
+## 🌟 Next Steps
+
+One of the most important parts regarding the next steps is to **guarantee the quality and scientific correctness of the questions generated**. We could tackle this problem in two ways:
+
+1. First step would be to evaluate the LLM model on the provided objective, it would require to create a dataset to measure the affinity of the model to the expected results. This would be possible using tools like [llm-eval](https://github.com/EleutherAI/lm-evaluation-harness) (the tool behing [open-llm-leaderboard](https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard#/)).
+
+2. The Second step would require adding traceability to the outcomes of the model. A well known tool to do so is [MLFlow, that allows different options to enable tracing of the GenAI applications](https://mlflow.org/docs/latest/llms/tracing/index.html).
