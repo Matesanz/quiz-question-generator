@@ -4,6 +4,24 @@ A simple App that creates a set of questions for a specific learning objective. 
 
 ![image](https://private-user-images.githubusercontent.com/44867923/418365230-452dbcee-a4a7-4d08-b388-a9f3ee2cb223.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDA5MzYwMDMsIm5iZiI6MTc0MDkzNTcwMywicGF0aCI6Ii80NDg2NzkyMy80MTgzNjUyMzAtNDUyZGJjZWUtYTRhNy00ZDA4LWIzODgtYTlmM2VlMmNiMjIzLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTAzMDIlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwMzAyVDE3MTUwM1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWFjYTYxM2MyNTE4MWRlMmU0MDZiMDM0ZDYzYmZiNGQ1MDA5YWQ5ZWI3NDVmMTUyOGFiMDQxNTkxYzkzNjk4NGImWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.1KVN_Q92dJjECcT0SUKHWxbSjN5IJMOLOD_hBBD5S5M)
 
+## 🔎 Table of contents
+
+- [🎓 Quiz Question Generator](#-quiz-question-generator)
+  - [� Table of contents](#-table-of-contents)
+  - [🚀 Quick Start](#-quick-start)
+  - [📝 How to use the API](#-how-to-use-the-api)
+  - [☁️ How to deploy to the cloud](#️-how-to-deploy-to-the-cloud)
+    - [Option 1: Using Google Cloud Run](#option-1-using-google-cloud-run)
+    - [Option 2: Using Azure Container Instances](#option-2-using-azure-container-instances)
+    - [Option 3: Using AWS Elastic Container Service (ECS)](#option-3-using-aws-elastic-container-service-ecs)
+  - [⚙️ Configuration](#️-configuration)
+    - [Parameters](#parameters)
+    - [Using .env File](#using-env-file)
+    - [Using env variables](#using-env-variables)
+  - [🏗️ Development](#️-development)
+    - [🐋 Devcontainer Environment](#-devcontainer-environment)
+    - [🧑‍⚖️ Pre-Commit](#️-pre-commit)
+
 ## 🚀 Quick Start
 
 1. First, **clone** the repository:
@@ -110,13 +128,6 @@ Deploy the API to the cloud using:
     ```
 
 2. Deploy the image using AWS ECS Fargate or EC2 with a task definition, ensuring the `OPENAI_API_KEY` environment variable is set.
-
-
-
-
-
-
-
 
 ## ⚙️ Configuration
 
