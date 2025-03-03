@@ -1,6 +1,29 @@
 # CHANGELOG
 
 
+## v0.3.1 (2025-03-03)
+
+### Other
+
+- Merge pull request #19 from Matesanz:Matesanz/issue18
+  ([`684c86b`](https://github.com/Matesanz/quiz-question-generator/commit/684c86b8bfe620014d7561a09bcb7c88f2db0b75))
+
+👷 Deploy docker image to docker hub in CI pipeline
+
+### 👷
+
+- 👷 update GitHub Actions workflow to include build-and-push job after release
+  ([`e788c28`](https://github.com/Matesanz/quiz-question-generator/commit/e788c28f1f981f46f0cb308d2fcc716bc08ccc6b))
+
+### 📝
+
+- 📝 add table of contents to README.md
+  ([`a516c4b`](https://github.com/Matesanz/quiz-question-generator/commit/a516c4b989cfcc33d92873904389ec510b3f4cb5))
+
+- 📝 update README to include cloud deployment instructions
+  ([`a3ae7d0`](https://github.com/Matesanz/quiz-question-generator/commit/a3ae7d0b7d097025f4595c05da48e76de11fcc82))
+
+
 ## v0.3.0 (2025-03-02)
 
 ### Other
