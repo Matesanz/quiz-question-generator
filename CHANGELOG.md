@@ -1,6 +1,30 @@
 # CHANGELOG
 
 
+## v0.3.2 (2025-03-03)
+
+### Other
+
+- Merge pull request #20 from Matesanz:Matesanz/issue18
+  ([`4a2830c`](https://github.com/Matesanz/quiz-question-generator/commit/4a2830c765d0c5addedec5935d32383f6026643d))
+
+💚 update Docker Hub login action to use secrets for username
+
+- Merge pull request #22 from Matesanz/Matesanz/issue18
+  ([`9e0fd28`](https://github.com/Matesanz/quiz-question-generator/commit/9e0fd28c552df3db1c90822c7992bad35f27a41c))
+
+- 💚 update Docker Hub login action to use secrets for username
+  ([`d770bc4`](https://github.com/Matesanz/quiz-question-generator/commit/d770bc4def633e4e1c5e3a8ce523b0b33f929c9d))
+
+### 📝
+
+- 📝 add links to UI and API documentation in README.md
+  ([`ec8e888`](https://github.com/Matesanz/quiz-question-generator/commit/ec8e888f10396bd1ea9dd525487cc732090d93db))
+
+- 📝 update README.md with project retrospective and next steps sections
+  ([`4cf3194`](https://github.com/Matesanz/quiz-question-generator/commit/4cf3194713ca3a4573beb875904bde41a327706d))
+
+
 ## v0.3.1 (2025-03-03)
 
 ### Other
