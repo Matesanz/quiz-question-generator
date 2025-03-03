@@ -33,7 +33,9 @@ docker compose up
 > [!NOTE]
 > You can find more configurable parameters in the [Parameters section](#parameters)
 
-You can also use code to check the API
+## 📝 How to use the API
+
+You can use the API through python:
 
 ```python
 import requests
@@ -50,6 +52,70 @@ headers = {
 response = requests.post(url, json=payload, headers=headers)
 quiz = response.json()
 ```
+
+## ☁️ How to deploy to the cloud
+
+Deploy the API to the cloud using:
+
+- [Google Cloud Run](#option-1-using-google-cloud-run)
+- [Azure Container Instances](#option-2-using-azure-container-instances)
+- [AWS Elastic Container Service](#option-3-using-aws-elastic-container-service-ecs)
+
+### Option 1: Using Google Cloud Run
+
+1. Authenticate with Google Cloud:
+
+   ```bash
+   gcloud auth configure-docker
+   ```
+
+2. Deploy the image to Google Cloud Run, ensuring it listens on port 8080 and includes the `OPENAI_API_KEY`:
+   ```bash
+   gcloud run deploy quiz-question-generator \
+      --image=matesanz/quiz-question-generator:latest \
+      --platform=managed \
+      --region=us-central1 \
+      --allow-unauthenticated \
+      --port=8000 \
+      --set-env-vars OPENAI_API_KEY=<your-api-key>
+   ```
+
+### Option 2: Using Azure Container Instances
+
+1. Login to Azure:
+
+   ```bash
+   az login
+   ```
+
+2. Deploy the container, ensuring the `OPENAI_API_KEY` environment variable is set:
+
+   ```bash
+   az container create --resource-group myResourceGroup \
+      --name quiz-question-generator \
+      --image matesanz/quiz-question-generator:latest \
+      --dns-name-label quiz-generator \
+      --ports 8000 \
+      --environment-variables OPENAI_API_KEY=<your-api-key>
+   ```
+
+### Option 3: Using AWS Elastic Container Service (ECS)
+
+1. Create an Elastic Container Repository (ECR) and push the image:
+    ```bash
+    aws ecr create-repository --repository-name quiz-question-generator
+    aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin <aws_account_id>.dkr.ecr.us-east-1.amazonaws.com
+    docker tag matesanz/quiz-question-generator:latest <aws_account_id>.dkr.ecr.us-east-1.amazonaws.com/quiz-question-generator:latest
+    docker push <aws_account_id>.dkr.ecr.us-east-1.amazonaws.com/quiz-question-generator:latest
+    ```
+
+2. Deploy the image using AWS ECS Fargate or EC2 with a task definition, ensuring the `OPENAI_API_KEY` environment variable is set.
+
+
+
+
+
+
 
 
 ## ⚙️ Configuration
