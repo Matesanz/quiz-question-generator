@@ -1,6 +1,24 @@
 # CHANGELOG
 
 
+## v0.3.4 (2025-03-04)
+
+### Other
+
+- Merge pull request #27 from Matesanz:Matesanz/issue26
+  ([`fd91063`](https://github.com/Matesanz/quiz-question-generator/commit/fd91063cb89bd60894d4f5f5af4988bc76e24890))
+
+🐛 allow UI to wait longer for API to avoid raising exceptions
+
+### 🐛
+
+- 🐛 allow UI to wait longer for API to avoid raising exceptions
+  ([`7bdf132`](https://github.com/Matesanz/quiz-question-generator/commit/7bdf132a3abb0d9f0150d911637a24c306032371))
+
+- 🐛 wait between attempts to connect to api
+  ([`136d476`](https://github.com/Matesanz/quiz-question-generator/commit/136d476f8619e7ea4ce7973faf6dd79021efcde8))
+
+
 ## v0.3.3 (2025-03-04)
 
 ### Other
