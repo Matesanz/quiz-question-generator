@@ -11,12 +11,18 @@ import os
 import requests
 import streamlit as st
 
+API_TIMEOUT = os.getenv("API_TIMEOUT", 10)
 API_URL = os.getenv("API_URL", "http://localhost:8000")
 QUIZ_CREATION_URL = f"{API_URL}/generate-quiz"
 
 def check_connection():
-    response = requests.get(API_URL, timeout=1)
-    response.raise_for_status()
+    with st.spinner("Checking connection to the API..."):
+        try:
+            response = requests.get(API_URL, timeout=API_TIMEOUT)
+            response.raise_for_status()
+        except (requests.exceptions.ConnectionError, requests.exceptions.Timeout):
+            st.error(f"❌ Unable to connect to the API at {API_URL}. Please make sure the API is running.")
+            st.stop()
 
 def set_config():
     st.set_page_config(
