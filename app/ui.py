@@ -7,23 +7,31 @@ Code quality is not a priority.
 # pylint: skip-file
 # ruff: noqa
 import os
+import time
 
 import requests
 import streamlit as st
 
+API_CONNECTION_ATTEMPS = os.getenv("API_CONNECTION_ATTEMPS", 1)
+WAIT_BETWEEN_RETRIES  = os.getenv("WAIT_BETWEEN_RETRIES", 5)
 API_TIMEOUT = os.getenv("API_TIMEOUT", 10)
 API_URL = os.getenv("API_URL", "http://localhost:8000")
 QUIZ_CREATION_URL = f"{API_URL}/generate-quiz"
 
-def check_connection():
-    with st.spinner("Checking connection to the API..."):
+def wait_for_api() -> bool:
+    for _ in range(API_CONNECTION_ATTEMPS):
         try:
             response = requests.get(API_URL, timeout=API_TIMEOUT)
-            response.raise_for_status()
-        except (requests.exceptions.ConnectionError, requests.exceptions.Timeout):
-            st.error(f"❌ Unable to connect to the API at {API_URL}. Please make sure the API is running.")
-            st.stop()
-
+            if response.status_code == 200:
+                return True
+        except requests.RequestException:
+            pass # ignore and retry
+        time.sleep(WAIT_BETWEEN_RETRIES)
+    
+    st.error(f"Failed to connect to the API at {API_URL}. Please try again later.")
+    st.stop()
+    return False
+        
 def set_config():
     st.set_page_config(
         page_title="Quizz App Generator",
@@ -31,8 +39,9 @@ def set_config():
     )
 
 def initialize():
-    check_connection()
     set_config()
+    with st.spinner("Connecting to the Backend..."):
+        wait_for_api()
 
 def retrieve_quiz(learning_objective: str, n_questions: int) -> dict:
     body = {"learning_objective": learning_objective, "n_questions": n_questions}
