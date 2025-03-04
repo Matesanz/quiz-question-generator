@@ -1,6 +1,21 @@
 # CHANGELOG
 
 
+## v0.3.3 (2025-03-04)
+
+### Other
+
+- Merge pull request #25 from Matesanz:Matesanz/issue23
+  ([`70dde01`](https://github.com/Matesanz/quiz-question-generator/commit/70dde01996f55e4c99e9d36e4651d7467ba8af10))
+
+📝 update README.md to replace image link with demo GIF
+
+### 📝
+
+- 📝 update README.md to replace image link with demo GIF
+  ([`235e18d`](https://github.com/Matesanz/quiz-question-generator/commit/235e18d1220d95a1d2b67ed041be88a968d844fe))
+
+
 ## v0.3.2 (2025-03-03)
 
 ### Other
