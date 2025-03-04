@@ -7,7 +7,7 @@ A simple App that creates a set of questions for a specific learning objective. 
 > 
 > * 🎉 **Or check the API docs [here](https://quiz-question-generator-418010332670.us-central1.run.app/docs#)!** 👈
 
-![image](https://private-user-images.githubusercontent.com/44867923/418365230-452dbcee-a4a7-4d08-b388-a9f3ee2cb223.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDA5MzYwMDMsIm5iZiI6MTc0MDkzNTcwMywicGF0aCI6Ii80NDg2NzkyMy80MTgzNjUyMzAtNDUyZGJjZWUtYTRhNy00ZDA4LWIzODgtYTlmM2VlMmNiMjIzLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTAzMDIlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwMzAyVDE3MTUwM1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWFjYTYxM2MyNTE4MWRlMmU0MDZiMDM0ZDYzYmZiNGQ1MDA5YWQ5ZWI3NDVmMTUyOGFiMDQxNTkxYzkzNjk4NGImWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.1KVN_Q92dJjECcT0SUKHWxbSjN5IJMOLOD_hBBD5S5M)
+![image](assets/quiz-generator-demo.gif)
 
 ## 🔎 Table of contents
 
