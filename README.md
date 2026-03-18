@@ -2,11 +2,6 @@
 
 A simple App that creates a set of questions for a specific learning objective. It uses LLMs in order to provide the set of questions.
 
-> [!TIP]
-> * 🎉 **Try out the UI [here](https://quiz-question-generator-front-418010332670.us-central1.run.app/)!** 👈
-> 
-> * 🎉 **Or check the API docs [here](https://quiz-question-generator-418010332670.us-central1.run.app/docs#)!** 👈
-
 ![image](assets/quiz-generator-demo.gif)
 
 ## 🔎 Table of contents
